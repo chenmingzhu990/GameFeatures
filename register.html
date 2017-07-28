@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>网易帐号中心</title>
+    <link rel="shortcut icon" type="text/css" href="favicon2.ico" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+</head>
+<body>
+    <div class="number">
+        <div class="w">
+            <a href="javascript:;">
+                 <div class="count fl"></div>
+            </a>
+            <div class="register fr">
+                已有帐号?去<a href="login.html">登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="red-block">
+        <div class="top-title">注册帐号</div>
+        <div class="m-content">
+            <form action="javascript:;">
+                <div class="u-input">
+                    <label for="input-account">帐号：</label>
+                    <input type="text" id="input-account" placeholder="网易邮箱/手机号/其他邮箱" name="email" />  
+                </div>
+                <div class="u-input">
+                    <label for="input-pw">密码：</label>
+                    <input type="password" id="input-pw" placeholder="6-16位密码，区分大小写" />  
+                </div>
+                <div class="u-input">
+                    <label for="input-pw2">确认密码：</label>
+                    <input type="password" id="input-pw2" placeholder="再次输入密码" />  
+                </div>
+                 <div class="u-input">
+                    <label for="input-pw2" style="margin-top: -5px;">验证码：</label>
+                    <div class="input-yanzheng">
+                         <em>>>>请依次点击 "伊 " "吹 " "颜 "完成验证>>></em> 
+                         <img src="images/1494659650227_747871284.jpg" height="100" width="320" alt="" />
+                    </div>
+                </div>
+                <div class="u-input">
+                    <label for="input-phone">手机号：</label>
+                    <input type="text" id="input-phone" placeholder="11位手机号"  maxlength="20" name="phone" />
+                </div>
+                <div class="u-input">
+                    <label for="input-phone">手机号：</label>
+                    <div class="input-txt">
+                        <div class="flag">
+                            <em></em> 
+                            <u></u>
+                        </div>
+                        <input type="text" id="input-phone" placeholder="手机号"  maxlength="20" name="phone" />
+                    </div>
+                    
+                </div>
+                <div class="u-input">
+                    <label for=" "></label>
+                    <span class="input-find">
+                        <h5>切换到国际手机</h5>
+                        <h6>忘记密码时，可通过手机快速找回密码</h6>
+                    </span>
+                </div>
+                <div class="u-input">
+                    <label for=" "></label>
+                    <span class="input-find">
+                        <h5>切换到国内手机</h5>
+                        <h6>忘记密码时，可通过手机快速找回密码</h6>
+                    </span>
+                </div>      
+                 <div class="u-input">
+                    <label for="input-sms">短信验证：</label>
+                    <input type="text" id="input-sms" placeholder="输入短信验证码"  maxlength="6" name="sms" class="whd" />
+                    <button>获取验证码</button>
+                    <!-- <span>获取验证码</span> -->
+                </div>
+                <div class="u-input">
+                    <label for="u-input"></label>
+                    <div class="enroll">注册</div>
+                </div>
+                 <div class="u-input">
+                    <span>
+                        <input type="checkbox" checked="checked" id="ipt" />
+                        <label for="ipt">用户勾选即代表同意<a href="javascript:;">《服务条款》</a>和<a href="javascript:;">《网络游戏用户隐私保护和个人信息利用政策》</a> </label>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <a href="javascript:;" class="bottom">
+           <span>
+               <em>
+                <img src="images/reg.jpg" height="100" width="900" alt="" />
+               </em>
+           </span>
+        </a>
+    </div>
+    <div class="footer">
+        <div class="w">
+            <div class="about">
+                <p>
+                    <a href="javascript:;">About NetEase</a>
+                    <a href="javascript:;">公司简介</a>
+                    <a href="javascript:;">联系方式</a>
+                    <a href="javascript:;">OAuth2.0认证</a>
+                    <a href="javascript:;">招聘信息</a>
+                    <a href="javascript:;">客户服务</a>
+                    <a href="javascript:;">相关法律</a>
+                    <a href="javascript:;">网络营销</a>
+                </p>
+                <p>网易公司版权所有 ©1997-2017</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('.red-block .m-content .u-input input').each(function(index, el) {
+            $(this).click(function(event) {
+                $('.red-block .m-content .u-input input').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+        $('.red-block .m-content .u-input:nth-child(7) .input-find h5').click(function(event) {
+            $('.m-content .u-input:nth-child(8)').css('display', 'block');
+            $('.m-content .u-input:nth-child(7)').css('display', 'none');
+            $('.m-content .u-input:nth-child(6)').css('display', 'block');
+            $('.m-content .u-input:nth-child(5)').css('display', 'none');
+        });
+
+          $('.red-block .m-content .u-input:nth-child(8) .input-find h5').click(function(event) {
+            $('.m-content .u-input:nth-child(7)').css('display', 'block');
+            $('.m-content .u-input:nth-child(8)').css('display', 'none');
+            $('.m-content .u-input:nth-child(5)').css('display', 'block');
+            $('.m-content .u-input:nth-child(6)').css('display', 'none');
+
+        });
+
+            var count = 10;
+        $('.red-block .m-content .u-input:nth-child(9) button').click(function(event) {
+            $(this).css('background-color', 'gray');
+            $(this).attr('disabled', 'disabled');
+
+             var timer = setInterval(auto, 1000);
+
+            function auto(){
+                count --;
+
+                if(count >=0){
+
+                    $('.red-block .m-content .u-input:nth-child(9) button').html(count+'s后重发');
+
+                }else {
+                    $('.red-block .m-content .u-input:nth-child(9) button').html('获取验证码');
+
+                    $('.red-block .m-content .u-input:nth-child(9) button').removeAttr('disabled');
+                    $('.red-block .m-content .u-input:nth-child(9) button').css('background-color', '#9ec5e3');
+
+                    clearInterval(timer);
+
+                    count = 10;
+                }
+            }
+
+        });
+    });
+</script>
+</html>
